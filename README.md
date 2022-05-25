@@ -166,6 +166,8 @@ Please see [the BLOOM training README](https://github.com/bigscience-workshop/bi
  
 _In progress._
 
+Current training logs: [Tensorboard link](https://huggingface.co/tensorboard/bigscience/tr11-176B-ml-logs/)
+
 - Checkpoint size:
     
     - Bf16 weights: 329GB
