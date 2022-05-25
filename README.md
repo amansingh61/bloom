@@ -1,11 +1,61 @@
 ---
 license: bigscience-bloom-rail-1.0
+language:
+- ak
+- ar
+- as
+- bm
+- bn
+- ca
+- code
+- en
+- es
+- eu
+- fon
+- fr
+- gu
+- hi
+- id
+- ig
+- ki
+- kn
+- lg
+- ln
+- ml
+- mr
+- ne
+- nso
+- ny
+- or
+- pa
+- pt
+- rn
+- rw
+- sn
+- st
+- sw
+- ta
+- te
+- tn
+- ts
+- tum
+- tw
+- ur
+- vi
+- wo
+- xh
+- yo
+- zh
+- zhs
+- zht
+- zu
 ---
 
 # <p>BLOOM LM<br/> _BigScience Large Open-source Open-access Multilingual Language Model_ <br/>Model Card</p>
-![BigScience Logo](https://assets.website-files.com/6139f3cdcbbff3a68486761d/613cd8997b270da063e230c5_Tekengebied%201-p-500.png)
+<img src="https://assets.website-files.com/6139f3cdcbbff3a68486761d/613cd8997b270da063e230c5_Tekengebied%201-p-500.png" alt="BigScience Logo" width="200"/>
 
-Version 1.0 / 23.May.2022
+
+Version 1.0 / 25.May.2022
 
 ## Table of Contents
 1. [Model Details](#model-details)
@@ -15,84 +65,100 @@ Version 1.0 / 23.May.2022
 5. [Evaluation](#evaluation)
 6. [Recommendations](#recommendations)
 7. [Glossary and Calculations](#glossary-and-calculations)
-8. [Model Card Authors](#model-card-authors)
+8. [More Information](#more-information)
+9. [Model Card Authors](#model-card-authors)
 
 ## Model Details  
 
 ### Basics
 *This section provides information for anyone who wants to know about the model.*
+
 <details>
 <summary>Click to expand</summary> <br/>
     
-**Developed by:** [BigScience](https://bigscience.huggingface.co)  
-* All collaborators are either volunteers or have an agreement with their employer.  [Further breakdown of participants forthcoming.]
+**Developed by:** BigScience ([website](https://bigscience.huggingface.co))
 
+* All collaborators are either volunteers or have an agreement with their employer. *(Further breakdown of participants forthcoming.)*
+    
 **Model Type:** Transformer-based Language Model
 
 **Version:** 1.0.0
 
-**Languages:** Multiple; see [training data](#training-data).
+**Languages:** Multiple; see [training data](#training-data)
 
-**License:** [RAIL License v1.0](https://docs.google.com/document/d/10NMjEKjxR7mrZ5CvugGBVaF6nPEgNxFBIbkH7z5HB-0/edit#)
+**License:** RAIL License v1.0 ([link](https://huggingface.co/spaces/bigscience/license))
 
-**Released:** [Forthcoming]
+**Release Date Estimate:** Monday, 11.July.2022
 
-**Send questions to:** bigscience-contact@googlegroups.com
+**Send Questions to:** bigscience-contact@googlegroups.com
 
-**Cite as:** [BigScience Workshop](https://bigscience.huggingface.co), BigScience Language Open-source Open-access Multilingual (BLOOM). International, May 2021-May 2022.
+**Cite as:** BigScience, _BigScience Language Open-source Open-access Multilingual (BLOOM) Language Model_. International, May 2021-May 2022
+
+**Funded by:** 
     
-**Funded by:** The French government, [Hugging Face](https://huggingface.co), and the organizations of contributors.  [Further breakdown of organizations forthcoming.]
+* The French government.
+
+* Hugging Face ([website](https://huggingface.co)).
+
+* Organizations of contributors.  *(Further breakdown of organizations forthcoming.)*
 
 </details>
 
 ### Technical Specifications
 *This section provides information for people who work on model development.*
+
 <details>
 <summary>Click to expand</summary><br/>
 
-*Please see [the BLOOM training README](https://github.com/bigscience-workshop/bigscience/tree/master/train/tr11-176B-ml#readme) for full details.*
+Please see [the BLOOM training README](https://github.com/bigscience-workshop/bigscience/tree/master/train/tr11-176B-ml#readme) for full details on replicating training.
 
-**Model Architecture:** Modified from Megatron-LM GPT2 ([paper link](https://arxiv.org/abs/1909.08053)):
+**Model Architecture:** Modified from Megatron-LM GPT2 (see [paper](https://arxiv.org/abs/1909.08053), [BLOOM Megatron code](https://github.com/bigscience-workshop/Megatron-DeepSpeed)):
 
-1.  Layer normalization applied to word embedding layer
+* Decoder-only architecture
 
-2. [ALiBI positional encodings](https://arxiv.org/pdf/2108.12409.pdf)
+* Layer normalization applied to word embeddings layer (`StableEmbedding`; see [code](https://github.com/facebookresearch/bitsandbytes), [paper](https://arxiv.org/pdf/2110.02861.pdf))
 
-**Objective Function:** [Cross Entropy with mean reduction](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss)
+* ALiBI positional encodings (see [paper](https://arxiv.org/pdf/2108.12409.pdf)), with GeLU activation functions
 
-**Number of Parameters:** 176B parameters; 70 layers, 112 attention heads
+* 176 billion parameters:
 
-#### **Infrastructure**
+    * 70 layers, 112 attention heads
+
+    * Hidden layers are 14336-dimensional
+
+    * Sequence length of 2048 tokens used (see [BLOOM tokenizer](https://huggingface.co/bigscience/tokenizer), [tokenizer description](#tokenization))
+
+**Objective Function:** Cross Entropy with mean reduction (see [API documentation](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss)).
     
-Compute Infrastructure: [Jean Zay](http://www.idris.fr/eng/jean-zay/jean-zay-presentation-eng.html) Public Supercomputer, provided by the French government
+**Compute infrastructure:** Jean Zay Public Supercomputer, provided by the French government (see [announcement](https://www.enseignementsup-recherche.gouv.fr/fr/signature-du-marche-d-acquisition-de-l-un-des-supercalculateurs-les-plus-puissants-d-europe-46733)).
 
-Hardware: 384 A100 80GB GPUs (48 nodes)
+* Hardware: 384 A100 80GB GPUs (48 nodes):
+    
+    * Additional 32 A100 80GB GPUs (4 nodes) in reserve
 
--   Additional 32 A100 80GB GPUs (4 nodes) in reserve
+    *  8 GPUs per node Using NVLink 4 inter-gpu connects, 4 OmniPath links
 
--   8 GPUs per node Using NVLink 4 inter-gpu connects, 4 OmniPath links
+    *   CPU: AMD
 
--   CPU: AMD
+    *   CPU memory: 512GB per node
 
--   CPU memory: 512GB per node
+    *   GPU memory: 640GB per node
 
--   GPU memory: 640GB per node
+    *   Inter-node connect: Omni-Path Architecture (OPA)
 
--   Inter-node connect: Omni-Path Architecture (OPA)
+    *   NCCL-communications network: a fully dedicated subnet
 
--   NCCL-communications network: a fully dedicated subnet
+    *   Disc IO network: shared network with other types of nodes
 
--   Disc IO network: shared network with other types of nodes
+* Software:
+  
+    *   Megatron-DeepSpeed ([Github link](https://github.com/bigscience-workshop/Megatron-DeepSpeed))
 
-Software:
+    *   DeepSpeed ([Github link](https://github.com/microsoft/DeepSpeed))
 
--   [Megatron-DeepSpeed](https://github.com/bigscience-workshop/Megatron-DeepSpeed), BigScience fork
+    *   PyTorch (pytorch-1.11 w/ CUDA-11.5; see [Github link](https://github.com/pytorch/pytorch))
 
--   [DeepSpeed](https://github.com/microsoft/DeepSpeed)
-
--   [PyTorch](https://github.com/pytorch/pytorch)-1.11 w/ CUDA-11.5
-
--   [apex](https://github.com/NVIDIA/apex) 
+    *   apex ([Github link](https://github.com/NVIDIA/apex))
 
 
 #### **Training**
@@ -100,25 +166,38 @@ Software:
  
 _In progress._
 
-Checkpoint size:
+- Checkpoint size:
+    
+    - Bf16 weights: 329GB
+    
+    - Full checkpoint with optimizer states: 2.3TB
 
--   Bf16 weights: 329GB
+- Training throughput: About 150 TFLOP per GPU per second
 
--   Full checkpoint with optimizer states: 2.3TB
+- Number of epochs: 1 (*current target*)
 
-Training throughput: About 150 TFLOP per GPU per second
+- Dates:
+    
+    - Started 11th March, 2022 11:42am PST
 
-Number of epochs: 1 (*current target*)
+    - Estimated end: 5th July, 2022
 
-Dates: 
-- Started 11th March, 2022 11:42am PST.
-- Planned end: 5th July, 2022.  
+- Estimated cost of training: Equivalent of $7-15M
 
+- Server training location: Île-de-France, France
 
-Estimated cost of training: Equivalent of $7-15M
+#### **Tokenization**
+    
+The BLOOM tokenizer ([link](https://huggingface.co/bigscience/tokenizer)) is a learned subword tokenizer trained using:
+    
+- A byte-level Byte Pair Encoding (BPE) algorithm 
 
-Server training location: Ile-de-France, France
+- A simple pre-tokenization rule, no normalization
 
+- A vocabulary size of 250,680
+
+It was trained on a subset of a preliminary version of the corpus using alpha-weighting per language.    
+    
 </details>
 
 
@@ -127,29 +206,26 @@ Server training location: Ile-de-France, France
 <details>
 <summary>Click to expand</summary><br/>
 
-[More forthcoming when training has completed.]
-
-The training supercomputer, [Jean Zay]((http://www.idris.fr/eng/jean-zay/jean-zay-presentation-eng.html)), uses mostly nuclear energy.
-
-The heat generated by it is reused for heating campus housing.
+The training supercomputer, Jean Zay ([website](http://www.idris.fr/eng/jean-zay/jean-zay-presentation-eng.html)), uses mostly nuclear energy. The heat generated by it is reused for heating campus housing.
     
-* Estimated carbon emissions:  [Forthcoming]
+**Estimated carbon emissions:**  *(Forthcoming upon completion of training.)*
+    
+**Estimated electricity usage:** *(Forthcoming upon completion of training.)*
 
-* Estimated electricity usage: [Forthcoming]
+
 </details>
-
 <p>&nbsp;</p>
 
 ## Uses
 
 *This section addresses questions around how the model is intended to be used, discusses the foreseeable users of the model (including those affected by the model), and describes uses that are considered out of scope or misuse of the model. 
-It provides information for anyone considering using the model, or who is affected by the model.*
+It provides information for anyone considering using the model or who is affected by the model.*
 
 
 <details>
 <summary>Click to expand</summary><br/>
     
-### Intended use
+### Intended Use
 
 This model is being created in order to enable public research on large language models (LLMs). LLMs are intended to be used for language generation or as a pretrained base model that can be further fine-tuned for specific tasks. Use cases below are not exhaustive.
 
@@ -157,35 +233,34 @@ This model is being created in order to enable public research on large language
 
 -   Text generation
 
--   Exploring characteristics of language generated by a language model.
+-   Exploring characteristics of language generated by a language model
 
-    -   Examples: Cloze tests, counterfactuals, generations with reframings.
+    -   Examples: Cloze tests, counterfactuals, generations with reframings
 
 #### **Downstream Use**
 
--   Tasks that leverage language models include: Information Extraction, Question Answering, Summarization.
+-   Tasks that leverage language models include: Information Extraction, Question Answering, Summarization
 
 ### Misuse and Out-of-scope Use
-
 *This section addresses what users ought not do with the model.*
 
-See the  [LLM LICENSE ](https://docs.google.com/document/d/10NMjEKjxR7mrZ5CvugGBVaF6nPEgNxFBIbkH7z5HB-0/edit), Attachment A, for detailed usage restrictions. The below list is non-exhaustive, but lists some easily foreseeable problematic use cases.
+See the [BLOOM License](https://huggingface.co/spaces/bigscience/license), Attachment A, for detailed usage restrictions. The below list is non-exhaustive, but lists some easily foreseeable problematic use cases.
 
 #### **Out-of-scope Uses**
 
-Using the model in [high-stakes](#glossary-and-calculations) settings is out of scope for this model.  The model is not designed for [critical decisions](#glossary-and-calculations) nor uses with any material consequences on an individual's livelihood or wellbeing. The model outputs content that appears factual but is not correct.  
+Using the model in [high-stakes](#high-stakes) settings is out of scope for this model.  The model is not designed for [critical decisions](#critical-decisions) nor uses with any material consequences on an individual's livelihood or wellbeing. The model outputs content that appears factual but is not correct.  
 
-##### Out-of-scope uses include:
+##### Out-of-scope Uses Include:
 
--   Usage in biomedical domains, political and legal domains, or finance domains.
+-   Usage in biomedical domains, political and legal domains, or finance domains
 
--   Usage for evaluating or scoring individuals, such as for employment, education, or credit.
+-   Usage for evaluating or scoring individuals, such as for employment, education, or credit
 
--   Applying the model for critical automatic decisions, generating factual content, creating reliable summaries, or generating predictions that must be correct.
+-   Applying the model for critical automatic decisions, generating factual content, creating reliable summaries, or generating predictions that must be correct
 
 #### **Misuse**
 
-Intentionally using the model for harm, violating rights, or other kinds of malicious activities is a misuse of this model. This includes:
+Intentionally using the model for harm, violating [human rights](#human-rights), or other kinds of malicious activities, is a misuse of this model. This includes:
 
 -   Spam generation
 
@@ -195,14 +270,13 @@ Intentionally using the model for harm, violating rights, or other kinds of mali
 
 -   Harassment and abuse
   
--   Deception
+-   [Deception](#deception)
 
 -   Unconsented impersonation and imitation
 
 -   Unconsented surveillance 
 
-
--   Generating content without attribution to the model, as specified in the [RAIL License, Use Restrictions](https://docs.google.com/document/d/10NMjEKjxR7mrZ5CvugGBVaF6nPEgNxFBIbkH7z5HB-0/edit#heading=h.3blioxkgzsje).
+-   Generating content without attribution to the model, as specified in the [RAIL License, Use Restrictions](https://huggingface.co/spaces/bigscience/license)
 
 ### Intended Users
 
@@ -224,17 +298,18 @@ Intentionally using the model for harm, violating rights, or other kinds of mali
 
 #### Indirect Users
 
--   Users of derivatives created by Direct Users, such as those using software with an [intended use](#intended-use).
+-   Users of derivatives created by Direct Users, such as those using software with an [intended use](#intended-use)
 
--   Users of [Derivatives of the Model, as described in the License](https://docs.google.com/document/d/117RhytMYC9HS-1NmWHEn9XBK7vJ5kdv9OcG6AV69Vec/edit#bookmark=id.pvl8781qfes3).
+-   Users of [Derivatives of the Model, as described in the License](https://huggingface.co/spaces/bigscience/license)
 
-#### Others Affected (Parties prenantes)
+#### Others Affected (Parties Prenantes)
 
 -   People and groups referred to by the LLM
 
 -   People and groups exposed to outputs of, or decisions based on, the LLM
 
 -   People and groups whose original work is included in the LLM
+    
 </details>
 <p>&nbsp;</p>
 
@@ -242,28 +317,25 @@ Intentionally using the model for harm, violating rights, or other kinds of mali
 *This section provides a high-level overview of the training data. It is relevant for anyone who wants to know the basics of what the model is learning.*
 
 
-
 <details>
 <summary>Click to expand</summary><br/>
     
-*Details for each dataset are provided in individual [Data Cards](https://huggingface.co/spaces/bigscience/BigScienceCorpus).*
+Details for each dataset are provided in individual [Data Cards](https://huggingface.co/spaces/bigscience/BigScienceCorpus).
 
 Training data includes:
 
--   45 natural languages.
+-   45 natural languages
     
--   12 programming languages.     
+-   12 programming languages
 
--   In 1.5TB of pre-processed text, converted into 350B unique tokens.
+-   In 1.5TB of pre-processed text, converted into 350B unique tokens (see [the tokenizer section](#tokenization) for more.)
 
-See the [Model README, Datasets for more](https://github.com/bigscience-workshop/bigscience/tree/master/train/tr11-176B-ml#datasets).
 
 #### **Languages**
+    
 The pie chart shows the distribution of languages in training data.
    
 ![pie chart showing the distribution of languages in training data](https://github.com/bigscience-workshop/model_card/blob/main/assets/data/pie_chart.svg?raw=true)
-
-
 
 
 The following table shows the further distribution of Niger-Congo and Indic languages in the training data.
@@ -333,8 +405,6 @@ The following table shows the distribution of programming languages.
 ## Risks and Limitations
 *This section identifies foreseeable harms and misunderstandings.*
 
-
-
 <details>
 <summary>Click to expand</summary><br/>
     
@@ -344,8 +414,7 @@ Model may:
 
 -   Contain stereotypes
   
--   Contain personal information
-
+-   Contain [personal information](#personal-data-and-information)
 
 -   Generate:
 
@@ -353,45 +422,45 @@ Model may:
 
     -   Discriminatory or prejudicial language
 
-    -   Content that may not be appropriate for all settings, including sexual content.
+    -   Content that may not be appropriate for all settings, including sexual content
 
--   Make errors, including producing incorrect information as if it were factual.
+-   Make errors, including producing incorrect information as if it were factual
 
--   Generate irrelevant or repetitive outputs.
+-   Generate irrelevant or repetitive outputs
 </details>
 <p>&nbsp;</p>
 
 ## Evaluation
+*This section describes the evaluation protocols and provides the results.*
+
 <details>
 <summary>Click to expand</summary><br/>
 
 ### Metrics 
-*This section describes the different ways performance is calculated, and why.*
-
-[More Forthcoming]
-
+*This section describes the different ways performance is calculated and why.*
+    
 Includes:
 
 | Metric             | Why chosen                                                         |
 |--------------------|--------------------------------------------------------------------|
-| F1                 | Standard for benchmarking                                          |
-| Accuracy           | Standard for benchmarking                                          |
-| Perplexity         | Standard metric for quantifying model improvements during training |
-| Cross Entropy Loss | Standard objective for language models                             |
+| [Perplexity](#perplexity)         | Standard metric for quantifying model improvements during training |
+| Cross Entropy [Loss](#loss) | Standard objective for language models                             |
 
-And multiple different metrics for specific tasks.
+And multiple different metrics for specific tasks. _(More evaluation metrics forthcoming upon completion of evaluation protocol.)_
 
 ### Factors 
 *This section lists some different aspects of what BLOOM models. Its focus is on those aspects that are likely to give rise to high variance in model behavior.*
 
 - Language, such as English or Yoruba
+
 - Domain, such as newswire or stories
+    
 - Demographic characteristics, such as gender or nationality
 
 ###  Results
 *Results are based on the [Factors](#factors) and [Metrics](#metrics).*
 
-**Train-time evaluation:**
+**Train-time Evaluation:**
 
 As of 19.May.2022, 18:00:
 
@@ -401,15 +470,14 @@ As of 19.May.2022, 18:00:
 
 - Perplexity: 9.15
 
-[More evaluation types forthcoming at the end of model training.]
-</details>
+(More evaluation scores forthcoming at the end of model training.)
 
-<BR/>
+</details>
+<p>&nbsp;</p>
 
 ## Recommendations
 
 *This section provides information on warnings and potential mitigations.*
-
 
 
 <details>
@@ -419,7 +487,7 @@ As of 19.May.2022, 18:00:
 
 -   Users should be aware of [Risks and Limitations](#risks-and-limitations), and include an appropriate age disclaimer or blocking interface as necessary.
 
--   Models pre-trained with the LLM should include an updated Model Card.
+-   Models pretrained with the LLM should include an updated Model Card.
 
 -   Users of the model should provide mechanisms for those affected to provide feedback, such as an email address for comments.
 
@@ -435,28 +503,58 @@ As of 19.May.2022, 18:00:
 <details>
 <summary>Click to expand</summary><br/>
 
--   **Loss:** A calculation of the difference between what the model has learned and what the data shows ("groundtruth"). The lower the loss, the better. The training process aims to minimize the loss. 
+-   <a name="loss">**Loss:**</a> A calculation of the difference between what the model has learned and what the data shows ("groundtruth"). The lower the loss, the better. The training process aims to minimize the loss. 
 
+-   <a name="perplexity">**Perplexity:**</a> This is based on what the model estimates the probability of new data is. The lower the perplexity, the better.  If the model is 100% correct at predicting the next token it will see, then the perplexity is 1. Mathematically this is calculated using entropy. 
 
--   **Perplexity:** This is based on what the model estimates the probability of new data is. The lower the perplexity, the better.  If the model is 100% correct at predicting the next token it will see, then the perplexity is 1. Mathematically this is calculated using entropy. 
+-   <a name="high-stakes">**High-stakes settings:**</a> Such as those identified as "high-risk AI systems" and "unacceptable risk AI systems" in the European Union's proposed [Artificial Intelligence (AI) Act](https://artificialintelligenceact.eu/annexes/).
 
--   **High-stakes settings:** Such as those identified as "high-risk AI systems" and "unacceptable risk AI systems" in the European Union's proposed [Artificial Intelligence (AI) Act](https://artificialintelligenceact.eu/annexes/).
+-   <a name="critical-decisions">**Critical decisions:**</a> Such as those defined in [the United States' proposed Algorithmic Accountability Act](https://www.congress.gov/117/bills/s3572/BILLS-117s3572is.pdf).
 
--   **Critical decisions**: Such as those defined in [the United States' proposed Algorithmic Accountability Act](https://www.congress.gov/117/bills/s3572/BILLS-117s3572is.pdf).
+-   <a name="human-rights">**Human rights:**</a> Includes those rights defined in the [Universal Declaration of Human Rights](https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf).
 
--   **Human Rights**: Includes those rights defined in the [Universal Declaration of Human Rights](https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf).
-
--  **Personal Data and Information**: Personal data and information is defined in multiple data protection regulations, such as "[personal data](https://gdpr-info.eu/issues/personal-data/)" in the [European Union's General Data Protection Regulation](https://gdpr-info.eu); and "personal information" in the Republic of South Africa's [Protection of Personal Information Act](https://www.gov.za/sites/default/files/gcis_document/201409/3706726-11act4of2013popi.pdf), The People's Republic of China's [Personal information protection law](http://en.npc.gov.cn.cdurl.cn/2021-12/29/c_694559.htm).
+-  <a name="personal-data-and-information">**Personal Data and Personal Information:**</a> Personal data and information is defined in multiple data protection regulations, such as "[personal data](https://gdpr-info.eu/issues/personal-data/)" in the [European Union's General Data Protection Regulation](https://gdpr-info.eu); and "personal information" in the Republic of South Africa's [Protection of Personal Information Act](https://www.gov.za/sites/default/files/gcis_document/201409/3706726-11act4of2013popi.pdf), The People's Republic of China's [Personal information protection law](http://en.npc.gov.cn.cdurl.cn/2021-12/29/c_694559.htm).
   
-- **Sensitive Characteristics**: This includes specifically protected categories in human rights (see [UHDR, Article 2](https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf)) and personal information regulation (see GDPR, [Article 9; Protection of Personal Information Act, Chapter 1](https://www.gov.za/sites/default/files/gcis_document/201409/3706726-11act4of2013popi.pdf))
+- <a name="sensitive-characteristics">**Sensitive characteristics:**</a> This includes specifically protected categories in human rights (see [UHDR, Article 2](https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf)) and personal information regulation (see GDPR, [Article 9; Protection of Personal Information Act, Chapter 1](https://www.gov.za/sites/default/files/gcis_document/201409/3706726-11act4of2013popi.pdf))
 
-- **Deception:** Doing something to intentionally mislead individuals to believe something that is false, such as by creating deadbots or chatbots on social media posing as real people, or generating text documents without making consumers aware that the text is machine generated.
+- <a name="deception">**Deception:**</a> Doing something to intentionally mislead individuals to believe something that is false, such as by creating deadbots or chatbots on social media posing as real people, or generating text documents without making consumers aware that the text is machine generated.
 
 </details>
 <p>&nbsp;</p>
 
+## More Information
+
+<details>
+<summary>Click to expand</summary><br/>
+    
+### Dataset Creation
+
+Blog post detailing the design choices during the dataset creation: https://bigscience.huggingface.co/blog/building-a-tb-scale-multilingual-dataset-for-language-modeling
+
+### Technical Specifications
+
+Blog post summarizing how the architecture, size, shape, and pre-training duration where selected: https://bigscience.huggingface.co/blog/what-language-model-to-train-if-you-have-two-million-gpu-hours
+
+More details on the architecture/optimizer: https://github.com/bigscience-workshop/bigscience/tree/master/train/tr11-176B-ml
+
+Blog post on the hardware/engineering side: https://bigscience.huggingface.co/blog/which-hardware-to-train-a-176b-parameters-model
+
+Details on the distributed setup used for the training: https://github.com/bigscience-workshop/bigscience/tree/master/train/tr11-176B-ml
+
+Tensorboard updated during the training: https://huggingface.co/bigscience/tr11-176B-ml-logs/tensorboard#scalars&tagFilter=loss
+
+Insights on how to approach training, negative results: https://github.com/bigscience-workshop/bigscience/blob/master/train/lessons-learned.md
+
+Details on the obstacles overcome during the preparation on the engineering side (instabilities, optimization of training throughput, so many technical tricks and questions): https://github.com/bigscience-workshop/bigscience/blob/master/train/tr11-176B-ml/chronicles.md
+
+### Initial Results
+
+Initial prompting experiments using interim checkpoints: https://huggingface.co/spaces/bigscience/bloom-book
+
+</details>
+<p>&nbsp;</p>
+    
 ## Model Card Authors
 *Ordered roughly chronologically and by amount of time spent.*
 
-Margaret Mitchell, Giada Pistilli, Yacine Jernite, Ezinwanne Ozoani, Marissa Gerchick, Nazneen Rajani, Sasha Luccioni, Irene Solaiman, Maraim Masoud, Somaieh Nikpoor, Carlos Muñoz Ferrandis, Stas Bekman, Danish Contractor, David Lansky, Angelina McMillan-Major, Tristan Thrush, Suzana Ilić, Gérard Dupont, Shayne Longpre, Manan Dey, Stella Biderman, Douwe Kiela, Emi Baylor, Teven Le Scao, Aaron Gokaslan, Julien Launay
-
+Margaret Mitchell, Giada Pistilli, Yacine Jernite, Ezinwanne Ozoani, Marissa Gerchick, Nazneen Rajani, Sasha Luccioni, Irene Solaiman, Maraim Masoud, Somaieh Nikpoor, Carlos Muñoz Ferrandis, Stas Bekman, Danish Contractor, David Lansky, Angelina McMillan-Major, Tristan Thrush, Christopher Akiki, Suzana Ilić, Gérard Dupont, Shayne Longpre, Manan Dey, Stella Biderman, Douwe Kiela, Emi Baylor, Teven Le Scao, Aaron Gokaslan, Julien Launay
