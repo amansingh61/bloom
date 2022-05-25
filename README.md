@@ -446,7 +446,7 @@ Includes:
 | Metric             | Why chosen                                                         |
 |--------------------|--------------------------------------------------------------------|
 | [Perplexity](#perplexity)         | Standard metric for quantifying model improvements during training |
-| Cross Entropy [Loss](#loss) | Standard objective for language models                             |
+| Cross Entropy [Loss](#loss) | Standard objective for language models.                            |
 
 And multiple different metrics for specific tasks. _(More evaluation metrics forthcoming upon completion of evaluation protocol.)_
 
@@ -464,13 +464,13 @@ And multiple different metrics for specific tasks. _(More evaluation metrics for
 
 **Train-time Evaluation:**
 
-As of 19.May.2022, 18:00:
+As of 25.May.2022, 15:00 PST:
 
-- Training Loss: 2.04
+- Training Loss: 2.0
 
-- Validation Loss: 2.21
+- Validation Loss: 2.2
 
-- Perplexity: 9.15
+- Perplexity: 8.9
 
 (More evaluation scores forthcoming at the end of model training.)
 
