@@ -1,5 +1,5 @@
 ---
-license: other
+license: bigscience-bloom-rail-1.0
 ---
 
 # <p>BLOOM LM<br/> _BigScience Large Open-source Open-access Multilingual Language Model_ <br/>Model Card</p>
