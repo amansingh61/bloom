@@ -184,7 +184,7 @@ Current training logs: [Tensorboard link](https://huggingface.co/tensorboard/big
 
     - Estimated end: 5th July, 2022
 
-- Estimated cost of training: Equivalent of $7-15M
+- Estimated cost of training: Equivalent of $2-5M in cloud computing (including preliminary experiments)
 
 - Server training location: Île-de-France, France
 
