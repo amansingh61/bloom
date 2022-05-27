@@ -489,7 +489,7 @@ As of 25.May.2022, 15:00 PST:
 
 -   Users should be aware of [Risks and Limitations](#risks-and-limitations), and include an appropriate age disclaimer or blocking interface as necessary.
 
--   Models pretrained with the LLM should include an updated Model Card.
+-   Models trained or finetuned downstream of BLOOM LM should include an updated Model Card.
 
 -   Users of the model should provide mechanisms for those affected to provide feedback, such as an email address for comments.
 
