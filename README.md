@@ -92,7 +92,7 @@ Version 1.0 / 26.May.2022
 
 **Send Questions to:** bigscience-contact@googlegroups.com
 
-**Cite as:** BigScience, _BigScience Language Open-source Open-access Multilingual (BLOOM) Language Model_. International, May 2021-May 2022
+**Cite as:** BigScience, _BigScience Language Open-science Open-access Multilingual (BLOOM) Language Model_. International, May 2021-May 2022
 
 **Funded by:** 
     
