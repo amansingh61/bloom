@@ -49,6 +49,7 @@ language:
 - zhs
 - zht
 - zu
+pipeline_tag: text-generation
 ---
 
 # <p>BLOOM LM<br/> _BigScience Large Open-science Open-access Multilingual Language Model_ <br/>Model Card</p>
