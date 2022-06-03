@@ -23,6 +23,6 @@
   "skip_bias_add": true,
   "skip_bias_add_qkv": false,
   "transformers_version": "4.20.0.dev0",
-  "use_cache": false,
+  "use_cache": true,
   "vocab_size": 250880
 }
