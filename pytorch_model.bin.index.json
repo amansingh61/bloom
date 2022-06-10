@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "total_size": 256701667093757598507563477393900852847546398236101558255428058075828224
+    "total_size": 352494542848
   },
   "weight_map": {
     "h.0.input_layernorm.bias": "pytorch_model_00002-of-00072.bin",
