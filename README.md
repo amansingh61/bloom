@@ -56,7 +56,7 @@ pipeline_tag: text-generation
 <img src="https://assets.website-files.com/6139f3cdcbbff3a68486761d/613cd8997b270da063e230c5_Tekengebied%201-p-500.png" alt="BigScience Logo" width="200"/>
 
 
-Version 1.1 / 15.Jun.2022 - Current latest checkpoint: Global step 80100
+Version 1.1 / 15.Jun.2022 - Current latest checkpoint: **Global step 80100**
 
 ## Table of Contents
 1. [Model Details](#model-details)
