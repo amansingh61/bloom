@@ -52,7 +52,7 @@ language:
 pipeline_tag: text-generation
 ---
 
-# <span style="color:red"><b>WARNING:</b> In training checkpoint at global step 80100 This checkpoint do not correspond to a fully trained model. Evaluations of the checkpoint and model will be added when conducted.</span>
+# <span style="color:red"><b>WARNING:</b> In training checkpoint at global step 80100 This checkpoint do not correspond to a fully trained model. Evaluations of the checkpoint and model will be added when conducted (see below).</span>
 
 # <p>BLOOM LM<br/> _BigScience Large Open-science Open-access Multilingual Language Model_ <br/>Model Card</p>
 <img src="https://assets.website-files.com/6139f3cdcbbff3a68486761d/613cd8997b270da063e230c5_Tekengebied%201-p-500.png" alt="BigScience Logo" width="200"/>
