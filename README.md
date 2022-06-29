@@ -255,7 +255,7 @@ See the [BLOOM License](https://huggingface.co/spaces/bigscience/license), Attac
 
 Using the model in [high-stakes](#high-stakes) settings is out of scope for this model.  The model is not designed for [critical decisions](#critical-decisions) nor uses with any material consequences on an individual's livelihood or wellbeing. The model outputs content that appears factual but is not correct.  
 
-##### Out-of-scope Uses Include:
+Out-of-scope Uses Include:
 
 -   Usage in biomedical domains, political and legal domains, or finance domains
 
