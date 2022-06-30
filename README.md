@@ -52,11 +52,13 @@ language:
 pipeline_tag: text-generation
 ---
 
+# <span style="color:red"><b>WARNING:</b> Intermediary checkpoint at global step 80100. This checkpoint is not a fully trained model. Evaluations of intermediary checkpoints and the final model will be added when conducted (see below).</span>
+
 # <p>BLOOM LM<br/> _BigScience Large Open-science Open-access Multilingual Language Model_ <br/>Model Card</p>
 <img src="https://assets.website-files.com/6139f3cdcbbff3a68486761d/613cd8997b270da063e230c5_Tekengebied%201-p-500.png" alt="BigScience Logo" width="200"/>
 
 
-Version 1.0 / 26.May.2022
+Version 1.2 / 17.Jun.2022 - Current latest checkpoint: **Global step 80100**
 
 ## Table of Contents
 1. [Model Details](#model-details)
@@ -253,7 +255,7 @@ See the [BLOOM License](https://huggingface.co/spaces/bigscience/license), Attac
 
 Using the model in [high-stakes](#high-stakes) settings is out of scope for this model.  The model is not designed for [critical decisions](#critical-decisions) nor uses with any material consequences on an individual's livelihood or wellbeing. The model outputs content that appears factual but is not correct.  
 
-##### Out-of-scope Uses Include:
+Out-of-scope Uses Include:
 
 -   Usage in biomedical domains, political and legal domains, or finance domains
 
