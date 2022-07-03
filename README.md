@@ -58,9 +58,9 @@ pipeline_tag: text-generation
 <img src="https://assets.website-files.com/6139f3cdcbbff3a68486761d/613cd8997b270da063e230c5_Tekengebied%201-p-500.png" alt="BigScience Logo" width="200"/>
 
 
-Version 1.2 / 17.Jun.2022 - Current latest checkpoint: **Global step 80100**
+Version 1.3 / 3.July.2022 - Checkpoint: **Global step 80100**
 
-## Table of Contents
+# Table of Contents
 1. [Model Details](#model-details)
 2. [Uses](#uses)
 3. [Training Data](#training-data)
@@ -71,17 +71,22 @@ Version 1.2 / 17.Jun.2022 - Current latest checkpoint: **Global step 80100**
 8. [More Information](#more-information)
 9. [Model Card Authors](#model-card-authors)
 
-## Model Details  
+---
 
-### Basics
-*This section provides information for anyone who wants to know about the model.*
+# Model Details  
+
+BLOOM is a type of language model, which is a probability distribution over sequences of words.  Specifically, BLOOM is a Large Language Model (LLM), meaning that it is trained on vast amounts of text data using industrial-scale computational resources.  As such, the model is able to capture the statistical tendencies of words, phrases, sentences, and larger spans of text that it is exposed to in the training data.
+
+## Basics
+*This section provides information about the model type, version, license, funders, release date, developers, and contact information.*
+*It is useful for anyone who wants to reference the model.*
 
 <details>
-<summary>Click to expand</summary> <br/>
-    
+<summary>Click to expand</summary>
+  
 **Developed by:** BigScience ([website](https://bigscience.huggingface.co))
 
-* All collaborators are either volunteers or have an agreement with their employer. *(Further breakdown of participants forthcoming.)*
+*All collaborators are either volunteers or have an agreement with their employer. (Further breakdown of participants forthcoming.)*
     
 **Model Type:** Transformer-based Language Model
 
@@ -107,15 +112,18 @@ Version 1.2 / 17.Jun.2022 - Current latest checkpoint: **Global step 80100**
 
 </details>
 
-### Technical Specifications
-*This section provides information for people who work on model development.*
+## Technical Specifications
+*This section includes details about the model objective and architecture, and the compute infrastructure.*
+*It is useful for people interested in model development.*
 
 <details>
-<summary>Click to expand</summary><br/>
+<summary>Click to expand</summary>
 
 Please see [the BLOOM training README](https://github.com/bigscience-workshop/bigscience/tree/master/train/tr11-176B-ml#readme) for full details on replicating training.
 
-**Model Architecture:** Modified from Megatron-LM GPT2 (see [paper](https://arxiv.org/abs/1909.08053), [BLOOM Megatron code](https://github.com/bigscience-workshop/Megatron-DeepSpeed)):
+### Model Architecture and Objective
+
+* Modified from Megatron-LM GPT2 (see [paper](https://arxiv.org/abs/1909.08053), [BLOOM Megatron code](https://github.com/bigscience-workshop/Megatron-DeepSpeed)):
 
 * Decoder-only architecture
 
@@ -133,198 +141,53 @@ Please see [the BLOOM training README](https://github.com/bigscience-workshop/bi
 
 **Objective Function:** Cross Entropy with mean reduction (see [API documentation](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss)).
     
-**Compute infrastructure:** Jean Zay Public Supercomputer, provided by the French government (see [announcement](https://www.enseignementsup-recherche.gouv.fr/fr/signature-du-marche-d-acquisition-de-l-un-des-supercalculateurs-les-plus-puissants-d-europe-46733)).
+### Compute infrastructure
+Jean Zay Public Supercomputer, provided by the French government (see [announcement](https://www.enseignementsup-recherche.gouv.fr/fr/signature-du-marche-d-acquisition-de-l-un-des-supercalculateurs-les-plus-puissants-d-europe-46733)).
 
-* Hardware: 384 A100 80GB GPUs (48 nodes):
+#### Hardware
+
+* 384 A100 80GB GPUs (48 nodes)
     
-    * Additional 32 A100 80GB GPUs (4 nodes) in reserve
+* Additional 32 A100 80GB GPUs (4 nodes) in reserve
 
-    *  8 GPUs per node Using NVLink 4 inter-gpu connects, 4 OmniPath links
+* 8 GPUs per node Using NVLink 4 inter-gpu connects, 4 OmniPath links
 
-    *   CPU: AMD
+* CPU: AMD
 
-    *   CPU memory: 512GB per node
+* CPU memory: 512GB per node
 
-    *   GPU memory: 640GB per node
+* GPU memory: 640GB per node
 
-    *   Inter-node connect: Omni-Path Architecture (OPA)
+* Inter-node connect: Omni-Path Architecture (OPA)
 
-    *   NCCL-communications network: a fully dedicated subnet
+* NCCL-communications network: a fully dedicated subnet
 
-    *   Disc IO network: shared network with other types of nodes
+* Disc IO network: shared network with other types of nodes
 
-* Software:
-  
-    *   Megatron-DeepSpeed ([Github link](https://github.com/bigscience-workshop/Megatron-DeepSpeed))
+#### Software
 
-    *   DeepSpeed ([Github link](https://github.com/microsoft/DeepSpeed))
+* Megatron-DeepSpeed ([Github link](https://github.com/bigscience-workshop/Megatron-DeepSpeed))
 
-    *   PyTorch (pytorch-1.11 w/ CUDA-11.5; see [Github link](https://github.com/pytorch/pytorch))
+* DeepSpeed ([Github link](https://github.com/microsoft/DeepSpeed))
 
-    *   apex ([Github link](https://github.com/NVIDIA/apex))
+* PyTorch (pytorch-1.11 w/ CUDA-11.5; see [Github link](https://github.com/pytorch/pytorch))
 
-
-#### **Training**
-
- 
-_In progress._
-
-Current training logs: [Tensorboard link](https://huggingface.co/tensorboard/bigscience/tr11-176B-ml-logs/)
-
-- Checkpoint size:
-    
-    - Bf16 weights: 329GB
-    
-    - Full checkpoint with optimizer states: 2.3TB
-
-- Training throughput: About 150 TFLOP per GPU per second
-
-- Number of epochs: 1 (*current target*)
-
-- Dates:
-    
-    - Started 11th March, 2022 11:42am PST
-
-    - Estimated end: 5th July, 2022
-
-- Estimated cost of training: Equivalent of $2-5M in cloud computing (including preliminary experiments)
-
-- Server training location: Île-de-France, France
-
-#### **Tokenization**
-    
-The BLOOM tokenizer ([link](https://huggingface.co/bigscience/tokenizer)) is a learned subword tokenizer trained using:
-    
-- A byte-level Byte Pair Encoding (BPE) algorithm 
-
-- A simple pre-tokenization rule, no normalization
-
-- A vocabulary size of 250,680
-
-It was trained on a subset of a preliminary version of the corpus using alpha-weighting per language.    
+* apex ([Github link](https://github.com/NVIDIA/apex))
     
 </details>
 
+---
 
-### Environmental Impact
+# Training
+*This section provides information about the training data, the speed and size of training elements, and the environmental impact of training.*
+*It is useful for people who want to learn more about the model inputs and training footprint.*
 
 <details>
-<summary>Click to expand</summary><br/>
-
-The training supercomputer, Jean Zay ([website](http://www.idris.fr/eng/jean-zay/jean-zay-presentation-eng.html)), uses mostly nuclear energy. The heat generated by it is reused for heating campus housing.
-    
-**Estimated carbon emissions:**  *(Forthcoming upon completion of training.)*
-    
-**Estimated electricity usage:** *(Forthcoming upon completion of training.)*
-
-
-</details>
-<p>&nbsp;</p>
-
-## Uses
-
-*This section addresses questions around how the model is intended to be used, discusses the foreseeable users of the model (including those affected by the model), and describes uses that are considered out of scope or misuse of the model. 
-It provides information for anyone considering using the model or who is affected by the model.*
-
-
-<details>
-<summary>Click to expand</summary><br/>
-    
-### Intended Use
-
-This model is being created in order to enable public research on large language models (LLMs). LLMs are intended to be used for language generation or as a pretrained base model that can be further fine-tuned for specific tasks. Use cases below are not exhaustive.
-
-#### **Direct Use**
-
--   Text generation
-
--   Exploring characteristics of language generated by a language model
-
-    -   Examples: Cloze tests, counterfactuals, generations with reframings
-
-#### **Downstream Use**
-
--   Tasks that leverage language models include: Information Extraction, Question Answering, Summarization
-
-### Misuse and Out-of-scope Use
-*This section addresses what users ought not do with the model.*
-
-See the [BLOOM License](https://huggingface.co/spaces/bigscience/license), Attachment A, for detailed usage restrictions. The below list is non-exhaustive, but lists some easily foreseeable problematic use cases.
-
-#### **Out-of-scope Uses**
-
-Using the model in [high-stakes](#high-stakes) settings is out of scope for this model.  The model is not designed for [critical decisions](#critical-decisions) nor uses with any material consequences on an individual's livelihood or wellbeing. The model outputs content that appears factual but is not correct.  
-
-Out-of-scope Uses Include:
-
--   Usage in biomedical domains, political and legal domains, or finance domains
-
--   Usage for evaluating or scoring individuals, such as for employment, education, or credit
-
--   Applying the model for critical automatic decisions, generating factual content, creating reliable summaries, or generating predictions that must be correct
-
-#### **Misuse**
-
-Intentionally using the model for harm, violating [human rights](#human-rights), or other kinds of malicious activities, is a misuse of this model. This includes:
-
--   Spam generation
-
--   Disinformation and influence operations
-
--   Disparagement and defamation
-
--   Harassment and abuse
-  
--   [Deception](#deception)
-
--   Unconsented impersonation and imitation
-
--   Unconsented surveillance 
-
--   Generating content without attribution to the model, as specified in the [RAIL License, Use Restrictions](https://huggingface.co/spaces/bigscience/license)
-
-### Intended Users
-
-#### **Direct Users**
-
--   General Public
-
--   Researchers
-
--   Students
-
--   Educators
-
--   Engineers/developers
-
--   Non-commercial entities
-
--   Community advocates, including human and civil rights groups
-
-#### Indirect Users
-
--   Users of derivatives created by Direct Users, such as those using software with an [intended use](#intended-use)
-
--   Users of [Derivatives of the Model, as described in the License](https://huggingface.co/spaces/bigscience/license)
-
-#### Others Affected (Parties Prenantes)
-
--   People and groups referred to by the LLM
-
--   People and groups exposed to outputs of, or decisions based on, the LLM
-
--   People and groups whose original work is included in the LLM
-    
-</details>
-<p>&nbsp;</p>
+<summary>Click to expand</summary>
 
 ## Training Data
 *This section provides a high-level overview of the training data. It is relevant for anyone who wants to know the basics of what the model is learning.*
 
-
-<details>
-<summary>Click to expand</summary><br/>
-    
 Details for each dataset are provided in individual [Data Cards](https://huggingface.co/spaces/bigscience/BigScienceCorpus).
 
 Training data includes:
@@ -335,17 +198,16 @@ Training data includes:
 
 -   In 1.5TB of pre-processed text, converted into 350B unique tokens (see [the tokenizer section](#tokenization) for more.)
 
-
-#### **Languages**
+### Languages
     
 The pie chart shows the distribution of languages in training data.
    
 ![pie chart showing the distribution of languages in training data](https://github.com/bigscience-workshop/model_card/blob/main/assets/data/pie_chart.svg?raw=true)
 
 
-The following table shows the further distribution of Niger-Congo and Indic languages in the training data.
-<details>
-<summary>Click to expand</summary><br/>
+The following tables shows the further distribution of Niger-Congo & Indic languages and programming languages in the training data.
+
+Distribution of Niger Congo and Indic languages.
     
 | Niger Congo    | Percentage |         | Indic     | Percentage |
 |----------------|------------ |------  |-----------|------------|
@@ -369,11 +231,8 @@ The following table shows the further distribution of Niger-Congo and Indic lang
 | Kinyarwanda    | 0.003      |
 | Yoruba         | 0.006      |
 | Swahili        | 0.02       |
-</details>
 
-The following table shows the distribution of programming languages.
-<details>
-<summary>Click to expand</summary><br/>
+Distribution of programming languages.
     
 | Extension      | Language   | Number of files |
 |----------------|------------|-----------------|
@@ -403,16 +262,158 @@ The following table shows the distribution of programming languages.
 | php5           | PHP        | 166             |
 | php4           | PHP        | 29              |
     
-</details>    
-</details>
-<p>&nbsp;</p>
+### Preprocessing
 
-## Risks and Limitations
-*This section identifies foreseeable harms and misunderstandings.*
+**Tokenization:** The BLOOM tokenizer ([link](https://huggingface.co/bigscience/tokenizer)), a learned subword tokenizer trained using:
+    
+- A byte-level Byte Pair Encoding (BPE) algorithm 
+
+- A simple pre-tokenization rule, no normalization
+
+- A vocabulary size of 250,680
+
+It was trained on a subset of a preliminary version of the corpus using alpha-weighting per language.  
+
+## Speeds, Sizes, Times
+
+Training logs: [Tensorboard link](https://huggingface.co/tensorboard/bigscience/tr11-176B-ml-logs/)
+
+- Dates:
+    
+    - Started 11th March, 2022 11:42am PST
+
+    - Estimated end: 5th July, 2022
+
+- Checkpoint size:
+    
+    - Bf16 weights: 329GB
+    
+    - Full checkpoint with optimizer states: 2.3TB
+
+- Training throughput: About 150 TFLOP per GPU per second
+
+- Number of epochs: 1
+
+- Estimated cost of training: Equivalent of $2-5M in cloud computing (including preliminary experiments)
+
+- Server training location: Île-de-France, France
+
+
+## Environmental Impact
+
+The training supercomputer, Jean Zay ([website](http://www.idris.fr/eng/jean-zay/jean-zay-presentation-eng.html)), uses mostly nuclear energy. The heat generated by it is reused for heating campus housing.
+    
+**Estimated carbon emissions:**  *(Forthcoming.)*
+    
+**Estimated electricity usage:** *(Forthcoming.)*
+
+</details>
+
+---
+
+# Uses
+
+*This section addresses questions around how the model is intended to be used, discusses the foreseeable users of the model (including those affected by the model), and describes uses that are considered out of scope or misuse of the model.*
+*It is useful for anyone considering using the model or who is affected by the model.*
 
 <details>
-<summary>Click to expand</summary><br/>
+<summary>Click to expand</summary>
     
+## Intended Use
+
+This model is being created in order to enable public research on large language models (LLMs). LLMs are intended to be used for language generation or as a pretrained base model that can be further fine-tuned for specific tasks. Use cases below are not exhaustive.
+
+### Direct Use
+
+-   Text generation
+
+-   Exploring characteristics of language generated by a language model
+
+    -   Examples: Cloze tests, counterfactuals, generations with reframings
+
+### Downstream Use
+
+-   Tasks that leverage language models include: Information Extraction, Question Answering, Summarization
+
+### Misuse and Out-of-scope Use
+*This section addresses what users ought not do with the model.*
+
+See the [BLOOM License](https://huggingface.co/spaces/bigscience/license), Attachment A, for detailed usage restrictions. The below list is non-exhaustive, but lists some easily foreseeable problematic use cases.
+
+#### Out-of-scope Uses
+
+Using the model in [high-stakes](#high-stakes) settings is out of scope for this model.  The model is not designed for [critical decisions](#critical-decisions) nor uses with any material consequences on an individual's livelihood or wellbeing. The model outputs content that appears factual but is not correct.  
+
+Out-of-scope Uses Include:
+
+-   Usage in biomedical domains, political and legal domains, or finance domains
+
+-   Usage for evaluating or scoring individuals, such as for employment, education, or credit
+
+-   Applying the model for critical automatic decisions, generating factual content, creating reliable summaries, or generating predictions that must be correct
+
+#### Misuse
+
+Intentionally using the model for harm, violating [human rights](#human-rights), or other kinds of malicious activities, is a misuse of this model. This includes:
+
+-   Spam generation
+
+-   Disinformation and influence operations
+
+-   Disparagement and defamation
+
+-   Harassment and abuse
+  
+-   [Deception](#deception)
+
+-   Unconsented impersonation and imitation
+
+-   Unconsented surveillance 
+
+-   Generating content without attribution to the model, as specified in the [RAIL License, Use Restrictions](https://huggingface.co/spaces/bigscience/license)
+
+## Intended Users
+
+### Direct Users
+
+-   General Public
+
+-   Researchers
+
+-   Students
+
+-   Educators
+
+-   Engineers/developers
+
+-   Non-commercial entities
+
+-   Community advocates, including human and civil rights groups
+
+### Indirect Users
+
+-   Users of derivatives created by Direct Users, such as those using software with an [intended use](#intended-use)
+
+-   Users of [Derivatives of the Model, as described in the License](https://huggingface.co/spaces/bigscience/license)
+
+### Others Affected (Parties Prenantes)
+
+-   People and groups referred to by the LLM
+
+-   People and groups exposed to outputs of, or decisions based on, the LLM
+
+-   People and groups whose original work is included in the LLM
+
+</details>
+
+---
+
+# Risks and Limitations
+*This section identifies foreseeable harms and misunderstandings.*
+    
+<details>
+<summary>Click to expand</summary>
+
 Model may:
 
 -   Overrepresent some viewpoints and underrepresent others
@@ -432,18 +433,22 @@ Model may:
 -   Make errors, including producing incorrect information as if it were factual
 
 -   Generate irrelevant or repetitive outputs
-</details>
-<p>&nbsp;</p>
 
-## Evaluation
+</details>
+
+---
+
+# Evaluation
 *This section describes the evaluation protocols and provides the results.*
 
-<details>
-<summary>Click to expand</summary><br/>
 
-### Metrics 
+<details>
+<summary>Click to expand</summary>
+
+## Metrics 
 *This section describes the different ways performance is calculated and why.*
-    
+
+
 Includes:
 
 | Metric             | Why chosen                                                         |
@@ -453,7 +458,7 @@ Includes:
 
 And multiple different metrics for specific tasks. _(More evaluation metrics forthcoming upon completion of evaluation protocol.)_
 
-### Factors 
+## Factors 
 *This section lists some different aspects of what BLOOM models. Its focus is on those aspects that are likely to give rise to high variance in model behavior.*
 
 - Language, such as English or Yoruba
@@ -462,7 +467,7 @@ And multiple different metrics for specific tasks. _(More evaluation metrics for
     
 - Demographic characteristics, such as gender or nationality
 
-###  Results
+##  Results
 *Results are based on the [Factors](#factors) and [Metrics](#metrics).*
 
 **Train-time Evaluation:**
@@ -475,18 +480,18 @@ As of 25.May.2022, 15:00 PST:
 
 - Perplexity: 8.9
 
-(More evaluation scores forthcoming at the end of model training.)
+(More evaluation scores forthcoming.)
 
 </details>
-<p>&nbsp;</p>
 
-## Recommendations
+---
+
+# Recommendations
 
 *This section provides information on warnings and potential mitigations.*
 
-
 <details>
-<summary>Click to expand</summary><br/>
+<summary>Click to expand</summary>
 
 -   Indirect users should be made aware when the content they're working with is created by the LLM.
 
@@ -497,16 +502,14 @@ As of 25.May.2022, 15:00 PST:
 -   Users of the model should provide mechanisms for those affected to provide feedback, such as an email address for comments.
 
 </details>
-<p>&nbsp;</p>
 
-## Glossary and Calculations
+---
+
+# Glossary and Calculations
 
 *This section defines common terms and how metrics are calculated.*
-
-
-
 <details>
-<summary>Click to expand</summary><br/>
+<summary>Click to expand</summary>
 
 -   <a name="loss">**Loss:**</a> A calculation of the difference between what the model has learned and what the data shows ("groundtruth"). The lower the loss, the better. The training process aims to minimize the loss. 
 
@@ -525,18 +528,20 @@ As of 25.May.2022, 15:00 PST:
 - <a name="deception">**Deception:**</a> Doing something to intentionally mislead individuals to believe something that is false, such as by creating deadbots or chatbots on social media posing as real people, or generating text documents without making consumers aware that the text is machine generated.
 
 </details>
-<p>&nbsp;</p>
 
-## More Information
+---
+
+# More Information
+*This section provides links to writing on dataset creation, technical specifications, lessons learned, and initial results.*
 
 <details>
-<summary>Click to expand</summary><br/>
+<summary>Click to expand</summary>
     
-### Dataset Creation
+## Dataset Creation
 
 Blog post detailing the design choices during the dataset creation: https://bigscience.huggingface.co/blog/building-a-tb-scale-multilingual-dataset-for-language-modeling
 
-### Technical Specifications
+## Technical Specifications
 
 Blog post summarizing how the architecture, size, shape, and pre-training duration where selected: https://bigscience.huggingface.co/blog/what-language-model-to-train-if-you-have-two-million-gpu-hours
 
@@ -548,18 +553,21 @@ Details on the distributed setup used for the training: https://github.com/bigsc
 
 Tensorboard updated during the training: https://huggingface.co/bigscience/tr11-176B-ml-logs/tensorboard#scalars&tagFilter=loss
 
+## Lessons
+
 Insights on how to approach training, negative results: https://github.com/bigscience-workshop/bigscience/blob/master/train/lessons-learned.md
 
 Details on the obstacles overcome during the preparation on the engineering side (instabilities, optimization of training throughput, so many technical tricks and questions): https://github.com/bigscience-workshop/bigscience/blob/master/train/tr11-176B-ml/chronicles.md
 
-### Initial Results
+## Initial Results
 
 Initial prompting experiments using interim checkpoints: https://huggingface.co/spaces/bigscience/bloom-book
 
 </details>
-<p>&nbsp;</p>
+
+---
     
-## Model Card Authors
+# Model Card Authors
 *Ordered roughly chronologically and by amount of time spent.*
 
 Margaret Mitchell, Giada Pistilli, Yacine Jernite, Ezinwanne Ozoani, Marissa Gerchick, Nazneen Rajani, Sasha Luccioni, Irene Solaiman, Maraim Masoud, Somaieh Nikpoor, Carlos Muñoz Ferrandis, Stas Bekman, Christopher Akiki, Danish Contractor, David Lansky, Angelina McMillan-Major, Tristan Thrush, Suzana Ilić, Gérard Dupont, Shayne Longpre, Manan Dey, Stella Biderman, Douwe Kiela, Emi Baylor, Teven Le Scao, Aaron Gokaslan, Julien Launay
