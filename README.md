@@ -58,7 +58,7 @@ pipeline_tag: text-generation
 <img src="https://assets.website-files.com/6139f3cdcbbff3a68486761d/613cd8997b270da063e230c5_Tekengebied%201-p-500.png" alt="BigScience Logo" width="200"/>
 
 
-Version 1.3 / 3.July.2022 - Checkpoint: **Global step 80100**
+Version 1.3 / 3.July.2022 - Checkpoint: **Global step 91100**
 
 # Table of Contents
 1. [Model Details](#model-details)
