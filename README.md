@@ -94,7 +94,7 @@ BLOOM is a type of language model, which is a probability distribution over sequ
 
 **Languages:** Multiple; see [training data](#training-data)
 
-**License:** RAIL License v1.0 ([link](https://huggingface.co/spaces/bigscience/license))
+**License:** RAIL License v1.0 ([link](https://huggingface.co/spaces/bigscience/license) / [article and FAQ](https://bigscience.huggingface.co/blog/the-bigscience-rail-license))
 
 **Release Date Estimate:** Monday, 11.July.2022
 
