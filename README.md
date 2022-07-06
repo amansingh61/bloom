@@ -341,7 +341,7 @@ See the [BLOOM License](https://huggingface.co/spaces/bigscience/license), Attac
 
 #### Out-of-scope Uses
 
-Using the model in [high-stakes](#high-stakes) settings is out of scope for this model.  The model is not designed for [critical decisions](#critical-decisions) nor uses with any material consequences on an individual's livelihood or wellbeing. The model outputs content that appears factual but is not correct.  
+Using the model in [high-stakes](#high-stakes) settings is out of scope for this model.  The model is not designed for [critical decisions](#critical-decisions) nor uses with any material consequences on an individual's livelihood or wellbeing. The model outputs content that appears factual but may not be correct.  
 
 Out-of-scope Uses Include:
 
@@ -432,6 +432,8 @@ Model may:
 -   Make errors, including producing incorrect information as if it were factual
 
 -   Generate irrelevant or repetitive outputs
+
+-   Induce users into attributing human traits to it, such as sentience or consciousness
 
 </details>
 
