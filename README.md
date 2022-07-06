@@ -53,8 +53,8 @@ pipeline_tag: text-generation
 ---
 
 
-# <p>BLOOM LM<br/> _BigScience Large Open-science Open-access Multilingual Language Model_ <br/>Model Card</p>
-<img src="https://assets.website-files.com/6139f3cdcbbff3a68486761d/613cd8997b270da063e230c5_Tekengebied%201-p-500.png" alt="BigScience Logo" width="200"/>
+# <h1>BLOOM LM<h1/> _BigScience Large Open-science Open-access Multilingual Language Model_ <br/>Model Card</p>
+<img src="https://s3.amazonaws.com/moonup/production/uploads/1657124309515-5f17f0a0925b9863e28ad517.png" alt="BigScience Logo" width="400"/>
 
 
 Version 1.3 / 3.July.2022 - Checkpoint: **Global step 95000** - Number of seen tokens: **398B seen tokens**
