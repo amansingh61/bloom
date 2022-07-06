@@ -53,7 +53,7 @@ pipeline_tag: text-generation
 ---
 
 <h1 style='text-align: center '>BLOOM LM</h1> 
-<h2 style='text-align: center '>BigScience Large Open-science Open-access Multilingual Language Model </h2> 
+<h2 style='text-align: center '><em>BigScience Large Open-science Open-access Multilingual Language Model</em> </h2> 
 <h3 style='text-align: center '>Model Card</h3>
 <img src="https://s3.amazonaws.com/moonup/production/uploads/1657124309515-5f17f0a0925b9863e28ad517.png" alt="BigScience Logo" width="800" style="margin-left:'auto' margin-right:'auto' display:'block'"/>
 
