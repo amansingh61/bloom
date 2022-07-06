@@ -52,9 +52,10 @@ language:
 pipeline_tag: text-generation
 ---
 
-
-# <br/>BLOOM LM<br/> _BigScience Large Open-science Open-access Multilingual Language Model_ <br/>Model Card</p>
-<img src="https://s3.amazonaws.com/moonup/production/uploads/1657124309515-5f17f0a0925b9863e28ad517.png" alt="BigScience Logo" width="800"/>
+<h1 style='text-align: center '>BLOOM LM</h1> 
+<h2 style='text-align: center '>_BigScience Large Open-science Open-access Multilingual Language Model_ </h2> 
+<h3 style='text-align: center '>Model Card</h3>
+<img src="https://s3.amazonaws.com/moonup/production/uploads/1657124309515-5f17f0a0925b9863e28ad517.png" alt="BigScience Logo" width="800" style="margin-left:'auto' margin-right:'auto' display:'block'"/>
 
 
 Version 1.3 / 6.July.2022 - Checkpoint: **Global step 95000** - Number of seen tokens: **398B seen tokens**
