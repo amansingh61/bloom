@@ -57,7 +57,7 @@ pipeline_tag: text-generation
 <img src="https://s3.amazonaws.com/moonup/production/uploads/1657124309515-5f17f0a0925b9863e28ad517.png" alt="BigScience Logo" width="800"/>
 
 
-Version 1.3 / 3.July.2022 - Checkpoint: **Global step 95000** - Number of seen tokens: **398B seen tokens**
+Version 1.3 / 6.July.2022 - Checkpoint: **Global step 95000** - Number of seen tokens: **398B seen tokens**
 
 # Table of Contents
 1. [Model Details](#model-details)
@@ -538,6 +538,11 @@ As of 25.May.2022, 15:00 PST:
 
 <details>
 <summary>Click to expand</summary>
+
+## Intermediate checkpoints
+
+For academic (or any) usage, we published the intermediate checkpoints, corresponding to the model state at each 5000 steps. Please follow [this link](https://huggingface.co/bigscience/bloom-176-intermediate) to get these checkpoints.
+
     
 ## Dataset Creation
 
