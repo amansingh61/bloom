@@ -111,6 +111,7 @@ BLOOM is a type of language model, which is a probability distribution over sequ
 
 </details>
 
+
 ## Technical Specifications
 *This section includes details about the model objective and architecture, and the compute infrastructure.*
 *It is useful for people interested in model development.*
