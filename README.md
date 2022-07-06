@@ -53,7 +53,7 @@ pipeline_tag: text-generation
 ---
 
 
-# <h1>BLOOM LM<h1/> _BigScience Large Open-science Open-access Multilingual Language Model_ <br/>Model Card</p>
+# <br/>BLOOM LM<br/> _BigScience Large Open-science Open-access Multilingual Language Model_ <br/>Model Card</p>
 <img src="https://s3.amazonaws.com/moonup/production/uploads/1657124309515-5f17f0a0925b9863e28ad517.png" alt="BigScience Logo" width="800"/>
 
 
