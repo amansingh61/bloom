@@ -320,6 +320,12 @@ The training supercomputer, Jean Zay ([website](http://www.idris.fr/eng/jean-zay
 <details>
 <summary>Click to expand</summary>
     
+## How to use
+
+This model can be easily used and deployed using HuggingFace's ecosystem. This needs `transformers` and `accelerate` installed. The model can be downloaded as follows:
+
+ <img src="https://s3.amazonaws.com/moonup/production/uploads/1657271608456-62441d1d9fdefb55a0b7d12c.png" width="800" style="margin-left:'auto' margin-right:'auto' display:'block'"/>
+
 ## Intended Use
 
 This model is being created in order to enable public research on large language models (LLMs). LLMs are intended to be used for language generation or as a pretrained base model that can be further fine-tuned for specific tasks. Use cases below are not exhaustive.
