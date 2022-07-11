@@ -179,11 +179,11 @@ Details for each dataset are provided in individual [Data Cards](https://hugging
 
 Training data includes:
 
--   45 natural languages
+-   46 natural languages
     
--   12 programming languages
+-   13 programming languages
 
--   In 1.5TB of pre-processed text, converted into 350B unique tokens (see [the tokenizer section](#tokenization) for more.)
+-   In 1.6TB of pre-processed text, converted into 350B unique tokens (see [the tokenizer section](#tokenization) for more.)
 
 ### Languages
     
