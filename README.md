@@ -294,7 +294,7 @@ Training data includes:
     
 The pie chart shows the distribution of languages in training data.
    
-![pie chart showing the distribution of languages in training data](https://github.com/bigscience-workshop/model_card/blob/grammar/assets/data/pie_v2.svg?raw=true)
+![pie chart showing the distribution of languages in training data](https://github.com/bigscience-workshop/model_card/blob/main/assets/data/pie_v2.svg?raw=true)
 
 
 The following tables shows the further distribution of Niger-Congo & Indic languages and programming languages in the training data.
