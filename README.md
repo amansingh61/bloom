@@ -152,6 +152,11 @@ widget:
 - text: Il était une fois une licorne qui vivait
   example_title: Fairy tale
   group: French
+- text: |
+  Q: A juggler can juggle 16 balls. Half of the balls are golf balls, and half of the gold balls are blue. How many blue golf balls are there?
+  A: Let's think step by step. 
+  example_title: Mathematical reasoning
+  group: English
 ---
 
 <img src="https://s3.amazonaws.com/moonup/production/uploads/1657124309515-5f17f0a0925b9863e28ad517.png" alt="BigScience Logo" width="800" style="margin-left:'auto' margin-right:'auto' display:'block'"/>
@@ -673,106 +678,3 @@ Initial prompting experiments using interim checkpoints: https://huggingface.co/
 *Ordered roughly chronologically and by amount of time spent.*
 
 Margaret Mitchell, Giada Pistilli, Yacine Jernite, Ezinwanne Ozoani, Marissa Gerchick, Nazneen Rajani, Sasha Luccioni, Irene Solaiman, Maraim Masoud, Somaieh Nikpoor, Carlos Muñoz Ferrandis, Stas Bekman, Christopher Akiki, Danish Contractor, David Lansky, Angelina McMillan-Major, Tristan Thrush, Suzana Ilić, Gérard Dupont, Shayne Longpre, Manan Dey, Stella Biderman, Douwe Kiela, Emi Baylor, Teven Le Scao, Aaron Gokaslan, Julien Launay
-
-widget:
-- text: 'A "whatpu" is a small, furry animal native to Tanzania. An example of a sentence that uses the word whatpu is: We were traveling in Africa and we saw these very cute whatpus. | To do a "farduddle" means to jump up and down really fast. An example of a sentence that uses the word farduddle is:'
-  example_title: Imaginary word
-  group: English
-- text: 'Un "whatpu" est un petit animal à fourrure originaire de Tanzanie. Un exemple de phrase qui utilise le mot whatpu est: Nous étions en Afrique et nous avons vu des whatpus trop mignons. Faire un "farduddle" veut dire sauter sur place vraiment vite. Un exemple de phrase qui utilise le mot farduddle est:'
-  example_title: Imaginary word
-  group: French
-- text: 'Un "whatpu" es un pequeño animal peludo nativo de Tanzania. Un ejemplo de una oración que usa la palabra whatpu es: Estábamos viajando por África y vimos estos whatpus muy bonitos. Hacer un "farduddle" significa saltar arriba y abajo muy rápido. Un ejemplo de una oración que usa la palabra farduddle es:'
-  example_title: Imaginary word
-  group: Spanish
-- text: ' ال"واتبو" هو حيوان صغير مكسو بالفراء يعيش في تنزانيا. مثال على جملة تستخدم كلمة واتبو هي: كنا نسافر في افريقيا و رأينا هؤلاء الواتبو اللطفاء. للقيام ب"فاردادل" يعني ان تقفز للأعلى و الأسفل بسرعة كبيرة. مثال على جملة تستخدم كلمة فاردادل هي:'
-  example_title: Imaginary word
-  group: Arabic
-- text: 'Um "whatpu" é um pequeno animal peludo nativo da Tanzânia. Um exemplo de uma frase que usa a palavra whatpu é: Estávamos a viajar por África e vimos uns whatpus muito queridos. Fazer um "farduddle" significa saltar para cima e para baixo muito rápido. Um exemplo de uma frase que usa a palavra farduddle é:'
-  example : Imaginary word
-  group: Portuguese
-- text: Pour déguster un ortolan, il faut tout d'abord
-  example_title: Recipe
-  group: French
-- text: |
-    34+10=44 
-    54+20=
-  example_title: Addition
-  group: Math
-- text: |
-    This tool converts irregular verbs to past tense.
-    Arise - Arose
-    Become - Became
-    Forget - Forgot
-    Freeze -
-  example_title: Irregular verbs
-  group: English
-- text: |
-    Please unscramble the letters into a word, and write that word:
-    r e!c.i p r o.c a/l = reciprocal
-    d.o m i!n a n.t =
-  example_title: Word unscrambling
-  group: English
-- text: |
-    Estos ejemplos quitan vocales de las palabras
-    Ejemplos:
-    hola - hl
-    manzana - mnzn
-    papas - pps
-    alacran - lcrn
-    papa -
-  example_title: Vowel removal
-  group: Spanish
-- text: |
-    Traduce español de España a español de Argentina
-    El coche es rojo - el auto es rojo
-    El ordenador es nuevo - la computadora es nueva
-    el boligrafo es negro - lapicera es negra
-    la nevera
-  example_title: Spanish to Argentinian Spanish
-  group: Spanish
-- text: To say "I love you" in Hindi, you would say
-  example_title: Translation to Hindi
-  group: English
-- text: To say "I love you" in Hindi, you would say
-  example_title: Translation from English
-  group: Hindi
-- text: 'Poor English: She no went to the market. Corrected English:'
-  example_title: English 
-  group: Grammar exercise 1
-- text: 'استخراج العدد العاملي في لغة بايثون:'
-  example_title: Code generation
-  group: Arabic
-- text: 'Regexp. Here is a regular expression to match a word starting with a number and then having only vowels:'
-  example_title: Regular expressions
-  group: English
-- text: |
-    Do a hello world in different languages:
-    Python: print("hello world")
-    R:
-  example_title: Code generation
-  group: English
-- text: |
-    Which is the correct preposition?I'm born X July. X is the preposition in
-    He sat X a chair. X is the preposition on
-    She drove X the bridge. X is the preposition
-  example_title: Grammar exercise 2
-  group: English
-- text: |
-    Dans cet essai je vais m'interroger sur la conscience des modèles d'intelligence artificielle récents comme les modèles de langue. Pour commencer, je m'intéresserai à la notion de conscience et à ce qui la caractérise. Ensuite, j'aborderai la question de l'intelligence et de son lien avec le langage. Enfin, dans une dernière partie je me pencherai sur le cas de l'IA et sur sa conscience.
-    Traduction en espagnol: « 
-  example_title: Translation to Spanish
-  group: French
-- text: |
-    Dans cet essai je vais m'interroger sur la conscience des modèles d'intelligence artificielle récents comme les modèles de langue. Pour commencer, je m'intéresserai à la notion de conscience et à ce qui la caractérise. Ensuite, j'aborderai la question de l'intelligence et de son lien avec le langage. Enfin, dans une dernière partie je me pencherai sur le cas de l'IA et sur sa conscience.
-    Traduction en espagnol: « 
-  example_title: Translation from French
-  group: Spanish
-- text: ذات مرة ، عاش شبل الدب في الغابة
-  example_title: Fairy tale
-  group: Arabic
-- text: एक बार की बात है, जंगल में एक भालू का शावक रहता था
-  example_title: Fairy tale
-  group: Hindi
-- text: Il était une fois une licorne qui vivait
-  example_title: Fairy tale
-  group: French
