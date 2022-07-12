@@ -168,7 +168,7 @@ Version 1.3 / 6.July.2022 - Checkpoint: **Global step 95000** - Number of seen t
 
 # Model Details  
 
-BLOOM is a type of language model, which is a probability distribution over sequences of words.  Specifically, BLOOM is a Large Language Model (LLM), meaning that it is trained on vast amounts of text data using industrial-scale computational resources.  As such, the model is able to capture the statistical tendencies of words, phrases, sentences, and larger spans of text that it is exposed to in the training data.
+BLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. As such, it is able to output coherent, hardly distinguishable from human-written text in 46 languages and 13 programming languages, and can be instructed to perform text tasks it hasn't been explicitly trained for, by casting them as text generation tasks.
 
 ## Basics
 *This section provides information about the model type, version, license, funders, release date, developers, and contact information.*
