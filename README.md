@@ -2326,9 +2326,9 @@ See this repository for JSON files: https://github.com/bigscience-workshop/evalu
 | winogrande | eng | acc ↑ | 0.71 | 0.736 |
 | wnli (Median of 6 prompts) | eng | acc ↑ | 0.57 | 0.563 |
 | wsc (Median of 11 prompts) | eng | acc ↑ | 0.519 | 0.413 |
-| humaneval | python | pass@1  ↑ | 0.155 | 0.0 |
-| humaneval | python | pass@10  ↑ | 0.322 | 0.0 |
-| humaneval | python | pass@100  ↑ | 0.555 | 0.003 |
+| humaneval | python | pass@1 ↑ | 0.155 | 0.0 |
+| humaneval | python | pass@10 ↑ | 0.322 | 0.0 |
+| humaneval | python | pass@100 ↑ | 0.555 | 0.003 |
 
 
 **Train-time Evaluation:**
