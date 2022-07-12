@@ -7,7 +7,6 @@ language:
 - bm
 - bn
 - ca
-- code
 - en
 - es
 - eu
@@ -47,6 +46,19 @@ language:
 - yo
 - zh
 - zu
+- C
+- C++
+- C#
+- Go
+- Java
+- JavaScript
+- Lua
+- PHP
+- Python
+- Ruby
+- Rust
+- Scala
+- TypeScript
 pipeline_tag: text-generation
 widget:
 - text: 'A "whatpu" is a small, furry animal native to Tanzania. An example of a sentence that uses the word whatpu is: We were traveling in Africa and we saw these very cute whatpus. | To do a "farduddle" means to jump up and down really fast. An example of a sentence that uses the word farduddle is:'
