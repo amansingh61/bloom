@@ -46,8 +46,6 @@ language:
 - xh
 - yo
 - zh
-- zhs
-- zht
 - zu
 pipeline_tag: text-generation
 widget:
