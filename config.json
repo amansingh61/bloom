@@ -15,7 +15,6 @@
   "model_type": "bloom",
   "n_embed": 14336,
   "n_layer": 70,
-  "dtype":"bfloat16",
   "num_attention_heads": 112,
   "pretraining_tp": 4,
   "slow_but_exact": false,
