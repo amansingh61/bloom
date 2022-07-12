@@ -1768,7 +1768,7 @@ model-index:
 <img src="https://s3.amazonaws.com/moonup/production/uploads/1657124309515-5f17f0a0925b9863e28ad517.png" alt="BigScience Logo" width="800" style="margin-left:'auto' margin-right:'auto' display:'block'"/>
 
 BigScience Large Open-science Open-access Multilingual Language Model  
-Version 1.3 / 6.July.2022 - Checkpoint: **Global step 95000** - Number of seen tokens: **398B seen tokens**
+Version 1.3 / 6.July.2022 - Current Checkpoint: **Training Iteration  95000** - Training Information: unique tokens: **341B** | total seen tokens: **366B**
 
 ---
 
