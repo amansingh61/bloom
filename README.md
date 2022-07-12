@@ -113,8 +113,8 @@ widget:
   example_title: Translation from English
   group: Hindi
 - text: 'Poor English: She no went to the market. Corrected English:'
-  example_title: English 
-  group: Grammar exercise 1
+  example_title: Grammar exercise 1 
+  group: English
 - text: 'استخراج العدد العاملي في لغة بايثون:'
   example_title: Code generation
   group: Arabic
@@ -296,7 +296,7 @@ Training data includes:
     
 The pie chart shows the distribution of languages in training data.
    
-![pie chart showing the distribution of languages in training data](https://github.com/bigscience-workshop/model_card/blob/main/assets/data/pie_v2.svg?raw=true)
+![pie chart showing the distribution of languages in training data](https://github.com/bigscience-workshop/model_card/blob/grammar/assets/data/pie_v2.svg?raw=true)
 
 
 The following tables shows the further distribution of Niger-Congo & Indic languages and programming languages in the training data.
