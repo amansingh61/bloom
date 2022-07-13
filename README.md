@@ -7,6 +7,7 @@ language:
 - bm
 - bn
 - ca
+- code
 - en
 - es
 - eu
