@@ -140,7 +140,7 @@ widget:
   example_title: Code generation
   group: English
 - text: |
-    Which is the correct preposition?I'm born X July. X is the preposition in
+    Which is the correct preposition? I'm born X July. X is the preposition in
     He sat X a chair. X is the preposition on
     She drove X the bridge. X is the preposition
   example_title: Grammar exercise 2
