@@ -1928,7 +1928,7 @@ Distribution of Niger Congo and Indic languages.
 | Fon            | 0.0002     |         | Urdu      | 0.10       |
 | Kirundi        | 0.0003     |         | Tamil     | 0.20       |
 | Wolof          | 0.0004     |         | Bengali   | 0.50       |
-| Kuganda        | 0.0004     |         | Hindi     | 0.70       |
+| Luganda        | 0.0004     |         | Hindi     | 0.70       |
 | Chi Shona      | 0.001      |
 | Isi Zulu       | 0.001      |
 | Igbo           | 0.001      |
