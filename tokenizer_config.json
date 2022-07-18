@@ -1,2 +1,1 @@
-{"unk_token": "<unk>", "eos_token": "</s>", "bos_token": "<s>", "pad_token": "<pad>", "name_or_path": "bigscience/tokenizer", "special_tokens_map_file": null, "tokenizer_class": 
-"PreTrainedTokenizerFast", "padding_side":"left"}
+{"unk_token": "<unk>", "eos_token": "</s>", "bos_token": "<s>", "pad_token": "<pad>", "name_or_path": "bigscience/tokenizer", "special_tokens_map_file": null, "tokenizer_class":"BloomTokenizerFast", "padding_side":"left"}
