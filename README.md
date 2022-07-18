@@ -2185,6 +2185,8 @@ And multiple different metrics for specific tasks. _(More evaluation metrics for
 
 **Zero-shot evaluations:**
 
+# <span style="color:red"><b>WARNING:</b> These are <b>intermediate results</b></span>
+
 See this repository for JSON files: https://github.com/bigscience-workshop/evaluation-results
 
 | Task | Language | Metric | BLOOM-176B | OPT-175B* |
