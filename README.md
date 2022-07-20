@@ -1794,6 +1794,8 @@ BLOOM is an autoregressive Large Language Model (LLM), trained to continue text 
     
 **Model Type:** Transformer-based Language Model
 
+**Checkpoints format:** `transformers` (Megatron-DeepSpeed format available [here](https://huggingface.co/bigscience/bloom-optimizer-states))
+
 **Version:** 1.0.0
 
 **Languages:** Multiple; see [training data](#training-data)
