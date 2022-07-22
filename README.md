@@ -1917,7 +1917,7 @@ The following tables shows the further distribution of Niger-Congo & Indic langu
 Distribution of Niger Congo and Indic languages.
     
 | Niger Congo    | Percentage |         | Indic     | Percentage |
-|----------------|------------ |------  |-----------|------------|
+|----------------|------------| ------  |-----------|------------|
 | Chi Tumbuka    | 0.00002    |         | Assamese  | 0.01       |
 | Kikuyu         | 0.00004    |         | Odia      | 0.04       |
 | Bambara        | 0.00004    |         | Gujarati  | 0.04       |
@@ -1926,11 +1926,12 @@ Distribution of Niger Congo and Indic languages.
 | Sesotho        | 0.00007    |         | Kannada   | 0.06       |
 | Chi Chewa      | 0.0001     |         | Nepali    | 0.07       |
 | Setswana       | 0.0002     |         | Telugu    | 0.09       |
-| Northern Sotho | 0.0002     |         | Malayalam | 0.10       |
-| Fon            | 0.0002     |         | Urdu      | 0.10       |
-| Kirundi        | 0.0003     |         | Tamil     | 0.20       |
-| Wolof          | 0.0004     |         | Bengali   | 0.50       |
-| Luganda        | 0.0004     |         | Hindi     | 0.70       |
+| Lingala        | 0.0002     |         | Malayalam | 0.10       |
+| Northern Sotho | 0.0002     |         | Urdu      | 0.10       |
+| Fon            | 0.0002     |         | Tamil     | 0.20       |
+| Kirundi        | 0.0003     |         | Bengali   | 0.50       |
+| Wolof          | 0.0004     |         | Hindi     | 0.70       |
+| Luganda        | 0.0004     |
 | Chi Shona      | 0.001      |
 | Isi Zulu       | 0.001      |
 | Igbo           | 0.001      |
