@@ -2442,6 +2442,11 @@ Initial prompting experiments using interim checkpoints: https://huggingface.co/
 
 </details>
 
+
+## Original checkpoints
+
+The checkpoints in this repo correspond to the HuggingFace Transformers format. If you want to use our fork of [Megatron-DeepSpeed](https://github.com/bigscience-workshop/Megatron-DeepSpeed) that the model was trained with, you'd want to use [this repo instead](https://huggingface.co/bigscience/bloom-optimizer-states).
+
 ---
     
 # Model Card Authors
