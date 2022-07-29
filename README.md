@@ -81,12 +81,12 @@ widget:
 - text: Pour déguster un ortolan, il faut tout d'abord
   example_title: Recipe
   group: French
-- text: |
+- text: |-
     34+10=44 
     54+20=
   example_title: Addition
   group: Math
-- text: |
+- text: |-
     This tool converts irregular verbs to past tense.
     Arise - Arose
     Become - Became
@@ -94,13 +94,13 @@ widget:
     Freeze -
   example_title: Irregular verbs
   group: English
-- text: |
+- text: |-
     Please unscramble the letters into a word, and write that word:
     r e!c.i p r o.c a/l = reciprocal
     d.o m i!n a n.t =
   example_title: Word unscrambling
   group: English
-- text: |
+- text: |-
     Estos ejemplos quitan vocales de las palabras
     Ejemplos:
     hola - hl
@@ -110,7 +110,7 @@ widget:
     papa -
   example_title: Vowel removal
   group: Spanish
-- text: |
+- text: |-
     Traduce español de España a español de Argentina
     El coche es rojo - el auto es rojo
     El ordenador es nuevo - la computadora es nueva
@@ -133,24 +133,24 @@ widget:
 - text: 'Regexp. Here is a regular expression to match a word starting with a number and then having only vowels:'
   example_title: Regular expressions
   group: English
-- text: |
+- text: |-
     Do a hello world in different languages:
     Python: print("hello world")
     R:
   example_title: Code generation
   group: English
-- text: |
+- text: |-
     Which is the correct preposition? I'm born X July. X is the preposition in
     He sat X a chair. X is the preposition on
     She drove X the bridge. X is the preposition
   example_title: Grammar exercise 2
   group: English
-- text: |
+- text: |-
     Dans cet essai je vais m'interroger sur la conscience des modèles d'intelligence artificielle récents comme les modèles de langue. Pour commencer, je m'intéresserai à la notion de conscience et à ce qui la caractérise. Ensuite, j'aborderai la question de l'intelligence et de son lien avec le langage. Enfin, dans une dernière partie je me pencherai sur le cas de l'IA et sur sa conscience.
     Traduction en espagnol: « 
   example_title: Translation to Spanish
   group: French
-- text: |
+- text: |-
     Dans cet essai je vais m'interroger sur la conscience des modèles d'intelligence artificielle récents comme les modèles de langue. Pour commencer, je m'intéresserai à la notion de conscience et à ce qui la caractérise. Ensuite, j'aborderai la question de l'intelligence et de son lien avec le langage. Enfin, dans une dernière partie je me pencherai sur le cas de l'IA et sur sa conscience.
     Traduction en espagnol: « 
   example_title: Translation from French
@@ -164,7 +164,7 @@ widget:
 - text: Il était une fois une licorne qui vivait
   example_title: Fairy tale
   group: French
-- text: |
+- text: |-
   Q: A juggler can juggle 16 balls. Half of the balls are golf balls, and half of the gold balls are blue. How many blue golf balls are there?
   A: Let's think step by step. 
   example_title: Mathematical reasoning
@@ -2056,7 +2056,7 @@ See the [BLOOM License](https://huggingface.co/spaces/bigscience/license), Attac
 
 #### Out-of-scope Uses
 
-Using the model in [high-stakes](#high-stakes) settings is out of scope for this model.  The model is not designed for [critical decisions](#critical-decisions) nor uses with any material consequences on an individual's livelihood or wellbeing. The model outputs content that appears factual but may not be correct.  
+Using the model in [high-stakes](#high-stakes) settings is out of scope for this model.  The model is not designed for [critical decisions](#critical-decisions) nor uses with any material consequences on an individual's livelihood or wellbeing. The model outputs content that appears factual but may not be correct.  
 
 Out-of-scope Uses Include:
 
