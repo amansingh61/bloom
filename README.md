@@ -1754,15 +1754,15 @@ model-index:
     metrics:
     - name: pass@1
       type: pass@1
-      value: 0.15524390243902436
+      value: 0.15542682926829265
       verified: false
     - name: pass@10
       type: pass@10
-      value: 0.3220367632383857
+      value: 0.3278356276947017
       verified: false
     - name: pass@100
       type: pass@100
-      value: 0.5545431515723145
+      value: 0.5719815685597749
       verified: false
 ---
 
@@ -2338,8 +2338,8 @@ See this repository for JSON files: https://github.com/bigscience-workshop/evalu
 | wnli (Median of 6 prompts) | eng | acc ↑ | 0.57 | 0.563 |
 | wsc (Median of 11 prompts) | eng | acc ↑ | 0.519 | 0.413 |
 | humaneval | python | pass@1 ↑ | 0.155 | 0.0 |
-| humaneval | python | pass@10 ↑ | 0.322 | 0.0 |
-| humaneval | python | pass@100 ↑ | 0.555 | 0.003 |
+| humaneval | python | pass@10 ↑ | 0.328 | 0.0 |
+| humaneval | python | pass@100 ↑ | 0.572 | 0.003 |
 
 
 **Train-time Evaluation:**
