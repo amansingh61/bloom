@@ -619,7 +619,7 @@ And multiple different metrics for specific tasks. _(More evaluation metrics for
 See this repository for JSON files: https://github.com/bigscience-workshop/evaluation-results
 
 | Task | Language | Metric | BLOOM-176B | OPT-175B* |
-|:--------|:-----------------|:------------------------|-------------:|------------:|jjj
+|:--------|:-----------------|:------------------------|-------------:|------------:|
 | humaneval | python | pass@1 ↑ | 0.155 | 0.0 |
 | humaneval | python | pass@10 ↑ | 0.328 | 0.0 |
 | humaneval | python | pass@100 ↑ | 0.572 | 0.003 |
