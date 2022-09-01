@@ -151,8 +151,8 @@ widget:
   example_title: Translation to Spanish
   group: French
 - text: |-
-    Traduction en français: Dans cet essai je vais m'interroger sur la conscience des modèles d'intelligence artificielle récents comme les modèles de langue. Pour commencer, je m'intéresserai à la notion de conscience et à ce qui la caractérise. Ensuite, j'aborderai la question de l'intelligence et de son lien avec le langage. Enfin, dans une dernière partie je me pencherai sur le cas de l'IA et sur sa conscience.
-    Traduction en espagnol:
+    Traducción al francés: Dans cet essai je vais m'interroger sur la conscience des modèles d'intelligence artificielle récents comme les modèles de langue. Pour commencer, je m'intéresserai à la notion de conscience et à ce qui la caractérise. Ensuite, j'aborderai la question de l'intelligence et de son lien avec le langage. Enfin, dans une dernière partie je me pencherai sur le cas de l'IA et sur sa conscience.
+    Traducción al español:
   example_title: Translation from French
   group: Spanish
 - text: ذات مرة ، عاش شبل الدب في الغابة
