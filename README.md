@@ -265,7 +265,9 @@ Please see [the BLOOM training README](https://github.com/bigscience-workshop/bi
 
 * ALiBI positional encodings (see [paper](https://arxiv.org/pdf/2108.12409.pdf)), with GeLU activation functions
 
-* 176 billion parameters:
+* 176,247,271,424 parameters:
+
+    * 3,596,615,680 embedding parameters
 
     * 70 layers, 112 attention heads
 
