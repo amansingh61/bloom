@@ -174,10 +174,9 @@ model-index:
   results:
   - task:
       type: text-generation
-      name: text generation
     dataset:
+      type: openai_humaneval
       name: humaneval
-      type: humaneval
     metrics:
     - name: pass@1
       type: pass@1
