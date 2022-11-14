@@ -169,6 +169,14 @@ widget:
     A: Let's think step by step.
   example_title: Mathematical reasoning
   group: English
+
+co2_eq_emissions:
+  emissions: 24_700_000
+  source: "Estimating the Carbon Footprint of BLOOM, a 176B Parameter Language Model. https://arxiv.org/abs/2211.02001"
+  training_type: "pre-training"
+  geographical_location: "Orsay, France"
+  hardware_used: "384 A100 80GB GPUs"
+
 model-index:
 - name: bloom
   results:
