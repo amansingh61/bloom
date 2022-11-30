@@ -207,6 +207,8 @@ Version 1.3 / 6 July 2022
 
 Current Checkpoint: **Training Iteration  95000**
 
+Link to paper: [here](arxiv.org/abs/2211.05100)
+
 Total seen tokens: **366B**
 
 ---
