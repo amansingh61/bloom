@@ -165,7 +165,7 @@ widget:
   example_title: Fairy tale
   group: French
 - text: |-
-    Q: A juggler can juggle 16 balls. Half of the balls are golf balls, and half of the gold balls are blue. How many blue golf balls are there?
+    Q: A juggler can juggle 16 balls. Half of the balls are golf balls, and half of the golf balls are blue. How many blue golf balls are there?
     A: Let's think step by step.
   example_title: Mathematical reasoning
   group: English
