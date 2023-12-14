@@ -165,10 +165,18 @@ widget:
   example_title: Fairy tale
   group: French
 - text: |-
-    Q: A juggler can juggle 16 balls. Half of the balls are golf balls, and half of the gold balls are blue. How many blue golf balls are there?
+    Q: A juggler can juggle 16 balls. Half of the balls are golf balls, and half of the golf balls are blue. How many blue golf balls are there?
     A: Let's think step by step.
   example_title: Mathematical reasoning
   group: English
+
+co2_eq_emissions:
+  emissions: 24_700_000
+  source: "Estimating the Carbon Footprint of BLOOM, a 176B Parameter Language Model. https://arxiv.org/abs/2211.02001"
+  training_type: "pre-training"
+  geographical_location: "Orsay, France"
+  hardware_used: "384 A100 80GB GPUs"
+
 model-index:
 - name: bloom
   results:
@@ -192,12 +200,14 @@ model-index:
       verified: false
 ---
 
-<img src="https://s3.amazonaws.com/moonup/production/uploads/1657124309515-5f17f0a0925b9863e28ad517.png" alt="BigScience Logo" width="800" style="margin-left:'auto' margin-right:'auto' display:'block'"/>
+<img src="https://cdn-uploads.huggingface.co/production/uploads/1657124309515-5f17f0a0925b9863e28ad517.png" alt="BigScience Logo" width="800" style="margin-left:'auto' margin-right:'auto' display:'block'"/>
 
 BigScience Large Open-science Open-access Multilingual Language Model  
 Version 1.3 / 6 July 2022
 
 Current Checkpoint: **Training Iteration  95000**
+
+Link to paper: [here](https://arxiv.org/abs/2211.05100)
 
 Total seen tokens: **366B**
 
@@ -731,9 +741,11 @@ Initial prompting experiments using interim checkpoints: https://huggingface.co/
 
 The checkpoints in this repo correspond to the HuggingFace Transformers format. If you want to use our fork of [Megatron-DeepSpeed](https://github.com/bigscience-workshop/Megatron-DeepSpeed) that the model was trained with, you'd want to use [this repo instead](https://huggingface.co/bigscience/bloom-optimizer-states).
 
+Many intermediate checkpoints are available at https://huggingface.co/bigscience/bloom-intermediate/
+
 ---
     
 # Model Card Authors
-*Ordered roughly chronologically and by amount of time spent.*
+*Ordered roughly chronologically and by amount of time spent on creating this model card.*
 
 Margaret Mitchell, Giada Pistilli, Yacine Jernite, Ezinwanne Ozoani, Marissa Gerchick, Nazneen Rajani, Sasha Luccioni, Irene Solaiman, Maraim Masoud, Somaieh Nikpoor, Carlos Muñoz Ferrandis, Stas Bekman, Christopher Akiki, Danish Contractor, David Lansky, Angelina McMillan-Major, Tristan Thrush, Suzana Ilić, Gérard Dupont, Shayne Longpre, Manan Dey, Stella Biderman, Douwe Kiela, Emi Baylor, Teven Le Scao, Aaron Gokaslan, Julien Launay, Niklas Muennighoff
